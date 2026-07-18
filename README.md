@@ -251,10 +251,3 @@ $response = $aiService->generateResponse($text, $type);
 3. Настроить почтовый сервер (если нужна реальная отправка email)
 4. Настроить кеширование (Redis/Memcached)
 
-## Безопасность
-
-- ✓ Валидация входных данных
-- ✓ Rate limiting
-- ✓ Логирование IP и User-Agent
-- ✓ AI анализ для фильтрации нежелательных сообщений
-- ✓ Graceful fallback при ошибках AI
