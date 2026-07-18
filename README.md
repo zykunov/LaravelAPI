@@ -235,42 +235,6 @@ $response = $aiService->generateResponse($text, $type);
 3. Данные сохраняются без анализа
 4. Поля ai_analysis и sentiment остаются null
 
-## Тестирование
-
-### cURL примеры:
-
-```bash
-# Тест формы
-curl -X POST http://localhost/api/contact \
-  -H "Content-Type: application/json" \
-  -d @test_contact.json
-
-# Проверка статуса
-curl http://localhost/api/health
-
-# Статистика
-curl http://localhost/api/metrics
-```
-
-### JavaScript пример:
-
-```javascript
-fetch('/api/contact', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({
-    name: 'Иван Иванов',
-    phone: '+79001234567',
-    email: 'user@example.com',
-    comment: 'Тестовое сообщение'
-  })
-})
-.then(response => response.json())
-.then(data => console.log(data))
-.catch(error => console.error('Error:', error));
-```
 
 ## Дополнительные файлы
 
@@ -280,7 +244,7 @@ fetch('/api/contact', {
 - `test_contact_2.json` - Тестовые данные (вопрос)
 - `test_contact_3.json` - Тестовые данные (жалоба)
 
-## Следующие шаги
+## Шаги после установки
 
 1. Установить OpenAI API ключ в .env
 2. Запустить тесты
